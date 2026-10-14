@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Quest | Guess the Number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <main class="game-container">
+        <div class="top-label">
+            <span class="live-dot"></span>
+            NUMBER QUEST
+        </div>
+
+        <div class="game-icon">🎯</div>
+
+        <h1>Guess the <span>Number</span></h1>
+        <p class="subtitle">A secret number is waiting for you!</p>
+
+        <div class="range-badge">Choose a number between 1 and 100</div>
+
+        <div class="number-display" id="numberDisplay">?</div>
+
+        <p class="hint" id="message" aria-live="polite">
+            Make your first guess to begin.
+        </p>
+
+        <form id="guessForm">
+            <label for="guessInput">Enter your guess</label>
+            <div class="input-group">
+                <input
+                    type="number"
+                    id="guessInput"
+                    min="1"
+                    max="100"
+                    placeholder="e.g. 42"
+                    required
+                    autocomplete="off"
+                >
+                <button type="submit" id="guessButton">Guess <span>→</span></button>
+            </div>
+        </form>
+
+        <div class="stats">
+            <div class="stat-card">
+                <span class="stat-icon">🎮</span>
+                <span class="stat-label">ATTEMPTS</span>
+                <strong id="attempts">0</strong>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">🔥</span>
+                <span class="stat-label">BEST SCORE</span>
+                <strong id="bestScore">--</strong>
+            </div>
+        </div>
+
+        <div class="progress-track">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <button type="button" id="playAgain" class="restart-button" hidden>
+            ↻ Play Again
+        </button>
+
+        <p class="footer-text">Think smart. Guess right. Win big.</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
